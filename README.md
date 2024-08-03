@@ -40,5 +40,5 @@ MEDIUM BLOG is a blog application that allows users to create and update blogs. 
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/medium-blog.git
+git clone https://github.com/ethernos9/medium-blog.git
 cd medium-blog
