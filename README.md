@@ -1,4 +1,22 @@
-#MEDIUM BLOG 
-  A blog application which let's user create ,update blogs 
-  It uses severless architecture 
-  The frontend and backend import types from npm package which was deployed to npm for validating schema using zod 
+
+MEDIUM BLOG
+Overview
+MEDIUM BLOG is a blog application that allows users to create and update blogs. It utilizes a serverless architecture to ensure scalability and performance. The application leverages TypeScript types from an npm package for schema validation using Zod.
+
+Features
+Create Blogs: Users can create new blog posts.
+Update Blogs: Users can edit existing blog posts.
+Serverless Architecture: Built using serverless technology for better scalability and maintenance.
+Cloudflare Workers: Utilizes Cloudflare Workers for the serverless backend.
+Type-Safe: Frontend and backend import types from a shared npm package for consistent schema validation using Zod.
+Tech Stack
+Frontend
+React
+TypeScript
+Backend
+Cloudflare Workers
+TypeScript
+Hono
+Shared
+Zod for schema validation
+Created npm package for TypeScript types
