@@ -141,8 +141,21 @@ blogRouter.get('/bulk', async (c) => {
 		datasourceUrl: c.env?.DATABASE_URL	,
 	}).$extends(withAccelerate());
 	try {
-        let blogs = await prisma.post.findMany()
-        console.log("blogs : ", blogs)
+        let blogs = await prisma.post.findMany({
+            select:{
+                content:true,
+                title:true,
+                id:true,
+                author:{
+                    select:{
+                        userName:true
+                    }
+
+                }
+               
+            }
+        })
+       
         return c.json({
             blogs
            });
@@ -163,8 +176,32 @@ blogRouter.get('/:id', async (c) => {
 	const post = await prisma.post.findUnique({
 		where: {
 			id
-		}
+		},
+        select:{
+            id:true,
+            title:true,
+            content :true,
+            author:{
+                select:{
+                    userName:true
+                }
+            }
+
+        }
 	});
 
 	return c.json(post);
 })
+
+blogRouter.delete("/all",async(c)=>{
+    const prisma = new PrismaClient({
+		datasourceUrl: c.env?.DATABASE_URL	,
+	}).$extends(withAccelerate());
+	await prisma.post.deleteMany()
+    return c.json({
+        success:true,
+        message: "All posts deleted successfully"
+    }) 
+})
+    
+
