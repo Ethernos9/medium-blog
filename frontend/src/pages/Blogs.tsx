@@ -3,9 +3,11 @@ import { BlogCard } from '../components/BlogCard'
 import AppBar from '../components/AppBar'
 import { useBlogs } from '../Hooks'
 import { Skeleton } from '../components/Skeleton'
+import { useNavigate } from 'react-router-dom'
  
  const Blogs = () => {
        const {loading,blogs} = useBlogs()
+       
        if (loading){
           return <div className='pt-40 pl-80'>
                <Skeleton/>

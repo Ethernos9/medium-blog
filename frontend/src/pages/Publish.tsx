@@ -19,7 +19,7 @@ const Publish = () => {
              authorization : "Bearer "+ token
          }
        })
-       navigate('/')
+       navigate('/blogs')
     }
       
   return (

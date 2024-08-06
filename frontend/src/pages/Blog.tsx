@@ -7,10 +7,11 @@ import BlogContent from '../components/BlogContent';
 import AppBar from '../components/AppBar';
 import { Skeleton } from '../components/Skeleton';
 import Spinner from '../components/Spinner';
-
+import { useNavigate } from 'react-router-dom';
 
   const Blog = () => {
     const {id} = useParams();
+    
     
     if (!id){
       return <div>Error: No blog ID provided!</div>;
