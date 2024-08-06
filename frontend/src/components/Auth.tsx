@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Labelnput from './Labelnput'
-import { signupInput, signupInputFinal } from '@ethernos/medium-common'
+import { signupInputFinal } from '@ethernos/medium-common'
 import axios from 'axios'
 import { BackendUrl } from '../config'
 import { ToastContainer, toast } from 'react-toastify';

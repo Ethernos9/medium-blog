@@ -1,6 +1,6 @@
-import React from 'react'
+
 import { Link } from 'react-router-dom';
-import { BackendUrl } from '../config';
+
 
 interface BlogCardProps{
      authorName:string;
